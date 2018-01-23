@@ -436,3 +436,26 @@ SyntaxError (/home/anginblu/rails-form_tag-readme-v-000/app/views/posts/new.html
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.6ms)
+
+
+Started GET "/posts/new" for 73.213.168.251 at 2018-01-23 18:04:07 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 73.213.168.251 at 2018-01-23 18:04:17 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGZwWYF+85oVcQfSZbGkwC7ll/4VmF1MFybB+BHdKjD0oD5e7VHRBMmlk/okvgN6D/JipRJ3q9IjGFX6kCFKOA==", "post"=>{"title"=>"post 3", "description"=>"third"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "post 3"], ["description", "third"], ["created_at", "2018-01-23 18:04:17.336852"], ["updated_at", "2018-01-23 18:04:17.336852"]]
+  [1m[36m (30.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://67.205.130.239:35422/posts
+Completed 302 Found in 35ms (ActiveRecord: 31.2ms)
+
+
+Started GET "/posts" for 73.213.168.251 at 2018-01-23 18:04:17 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.3ms)
