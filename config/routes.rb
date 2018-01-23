@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   get 'new_post'
-  resources :posts, only: [:index]
+  resources :posts, only: [:index, :new]
 
 end
