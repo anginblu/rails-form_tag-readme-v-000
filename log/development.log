@@ -374,3 +374,18 @@ Completed 200 OK in 77ms (Views: 76.2ms | ActiveRecord: 0.3ms)
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "post 1"], ["description", "world"], ["created_at", "2018-01-23 18:00:45.557475"], ["updated_at", "2018-01-23 18:00:45.557475"]]
   [1m[35m (2.3ms)[0m  commit transaction
+
+
+Started GET "/posts" for 73.213.168.251 at 2018-01-23 18:00:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 337ms (Views: 321.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 73.213.168.251 at 2018-01-23 18:01:04 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.4ms)
