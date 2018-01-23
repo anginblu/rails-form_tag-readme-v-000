@@ -3,7 +3,6 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
-  def index
-    @posts = Post.all
+  def new
   end
 end
